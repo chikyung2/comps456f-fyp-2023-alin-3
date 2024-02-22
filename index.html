@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Garbage Classification</title>
+    </head>
+    <body>
+        <input id="uploadInput" type="file" />
+        <div id="imageContainer"></div>
+        <div id="result"></div>
+        <script>
+            const input = document.getElementById('uploadInput')
+            input.addEventListener('change', async (event) => {
+                const data = new FormData()
+                data.append('image_file', event.target.files[0], 'image_file')
+                const response = await fetch('http://127.0.0.1:8080/recognize', {
+                    method: 'post',
+                    body: data,
+                })
+                const result = await response.json()
+                displayResult(result)
+                displayImage(event.target.files[0])
+            })
+
+            function displayResult(result) {
+                const resultDiv = document.getElementById('result')
+                resultDiv.innerHTML = `
+                    <p>Top Class: ${result.top1_class}</p>
+                    <p>Top Score: ${result.top1_score}</p>
+                `
+            }
+
+            function displayImage(file) {
+                const imageContainer = document.getElementById('imageContainer')
+                const imgElement = document.createElement('img')
+                imgElement.src = URL.createObjectURL(file)
+                imgElement.width = 200 // Set the width of the image (adjust as needed)
+                imageContainer.innerHTML = '' // Clear previous image (if any)
+                imageContainer.appendChild(imgElement)
+            }
+        </script>
+    </body>
+</html>
