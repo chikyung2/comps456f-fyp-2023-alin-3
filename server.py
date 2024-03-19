@@ -12,6 +12,18 @@ def index():
     with open('index.html', 'r') as f:
         return f.read()
 
+@app.route('/upload', methods=['POST'])
+def upload():
+    if 'image' not in request.files:
+        return jsonify({'error': 'No image provided'})
+    
+    image = request.files['image']
+    image_data = image.read()
+    text = request.form['text']
+    location = request.form['location']
+    
+    return jsonify({'message': 'Image uploaded successfully'})
+
 
 @app.route('/recognize', methods=['POST'])
 def recognize():
