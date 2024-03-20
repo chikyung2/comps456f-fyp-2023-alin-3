@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
 
-export default function Home() {
-  return (
-      <div className="flex flex-col">
+export default function Page() {
+    return (
+        <div className="flex flex-col">
       <header className="flex h-14 lg:h-[60px] items-center justify-between gap-4 border-b bg-black px-6 dark:bg-black">
         <Link className="flex items-center gap-2 font-semibold text-white" href="/">
           <img alt="App Logo" className="h-10 w-10" src="/img/ECOchampC.png" />
@@ -28,15 +26,15 @@ export default function Home() {
           </Link>
         </nav>
       </header>
-      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
-        <div className="border rounded-lg shadow-sm p-4">
-          <h1 className="font-semibold text-2xl text-white">Main page</h1>
-          <img alt="App Logo" className="h-20 w-30" src="/img/ECOchampB.png" />
-          <p className="max-w-prose text-gray-500 text-sm md:text-base/relaxed dark:text-gray-400">
-            ECOchamp is a free web application to.....................
-          </p>
+      <main className="flex flex-1 flex-col items-center gap-4 p-4 md:gap-8 md:p-6">
+        <h1 className="font-semibold text-2xl text-black">Model Status</h1>
+        <div className="border rounded-lg shadow-sm p-4 w-full max-w-md">
+          <div className="flex flex-col gap-4">
+            """text show model status"""
+          </div>
         </div>
       </main>
     </div>
-  );
-}
+    );
+  }
+  
