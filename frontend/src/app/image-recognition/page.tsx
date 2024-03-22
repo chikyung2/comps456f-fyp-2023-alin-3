@@ -34,17 +34,8 @@ export default function Page() {
           <div className="border rounded-lg shadow-sm p-4">
             <h1 className="font-semibold text-2xl text-black">Image Recognition</h1>
             <div className="flex flex-col gap-4">
-              <img
-                alt="Upload Image"
-                className="rounded-lg w-full"
-                height={300}
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "400/300",
-                  objectFit: "cover",
-                }}
-                width={400}
-              />
+              <input type="file" accept="image/x-png,image/jpeg,image/gif"/>
+
               <Button className="w-full">Select Image</Button>
               <div className="flex gap-2">
                 <Button className="flex-1">Recognize</Button>

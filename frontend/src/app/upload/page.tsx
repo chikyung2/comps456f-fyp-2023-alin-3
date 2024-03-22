@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress"
 
 
 export default function Page() {
+  
     return (
         <div className="flex flex-col">
       <header className="flex h-14 lg:h-[60px] items-center justify-between gap-4 border-b bg-black px-6 dark:bg-black">
@@ -35,17 +36,8 @@ export default function Page() {
           <div className="border rounded-lg shadow-sm p-4">
             <h1 className="font-semibold text-2xl text-black">Image Upload</h1>
             <div className="flex flex-col gap-4">
-              <img
-                alt="Upload Image"
-                className="rounded-lg w-full"
-                height={300}
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "400/300",
-                  objectFit: "cover",
-                }}
-                width={400}
-              />
+              <input type="file" accept="image/x-png,image/jpeg,image/gif"/>
+              
               <Button className="w-full">Upload</Button>
             </div>
           </div>
