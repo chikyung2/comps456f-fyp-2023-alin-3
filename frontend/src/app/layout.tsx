@@ -1,7 +1,14 @@
+// @ts-nocheck
+
+"use client"
 import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google"
+import SplashScreen from "@/components/SplashScreen";
+import { usePathname } from "next/navigation";
+import { Path } from "animejs";
+import React, { useState, useEffect } from "react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -18,12 +25,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const pathname = usePathname()
+  const isHome = pathname === "/"
+  const [isLoading, setIsLoading] =useState(isHome)
+
+  useEffect(() =>{
+    if (isLoading) return },[setIsLoading])
+
   return (
     <html lang="en">
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
         fontSans.variable
-      )}>{children}</body>
+      )}>
+        {isLoading && isHome ? (<SplashScreen finishLoading={() => setIsLoading(false)}/>):( <>{children}</>)}
+        
+       
+      </body>
     </html>
   );
 }
