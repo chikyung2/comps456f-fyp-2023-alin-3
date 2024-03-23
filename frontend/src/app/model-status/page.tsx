@@ -1,8 +1,8 @@
 import Link from "next/link";
-
 export default function Page() {
+
     return (
-        <div className="flex flex-col">
+      <div className="flex flex-col">
       <header className="flex h-14 lg:h-[60px] items-center justify-between gap-4 border-b bg-black px-6 dark:bg-black">
         <Link className="flex items-center gap-2 font-semibold text-white" href="/">
           <img alt="App Logo" className="h-10 w-10" src="/img/ECOchampC.png" />
