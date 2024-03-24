@@ -27,7 +27,7 @@ def upload():
 
 @app.route('/recognize', methods=['POST'])
 def recognize():
-    image = request.files["image_file"]
+    image = request.files["image"]
     result = classify_on_image(image.stream)
     print(result)
     return jsonify(result)
