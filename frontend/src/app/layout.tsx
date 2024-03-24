@@ -9,6 +9,7 @@ import SplashScreen from "@/components/SplashScreen";
 import { usePathname } from "next/navigation";
 import { Path } from "animejs";
 import React, { useState, useEffect } from "react";
+import { Header } from "@/components/Header";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,12 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const pathname = usePathname()
-  const isHome = pathname === "/"
-  const [isLoading, setIsLoading] =useState(isHome)
+  // const pathname = usePathname()
+  // const isHome = pathname === "/"
+  // const [isLoading, setIsLoading] = useState(isHome)
 
-  useEffect(() =>{
-    if (isLoading) return },[setIsLoading])
+  // useEffect(() => {
+  //   if (isLoading) return
+  // }, [setIsLoading])
 
   return (
     <html lang="en">
@@ -38,9 +40,10 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         fontSans.variable
       )}>
-        {isLoading && isHome ? (<SplashScreen finishLoading={() => setIsLoading(false)}/>):( <>{children}</>)}
-        
-       
+        <Header />
+        {/* {isLoading && isHome ? (<SplashScreen finishLoading={() => setIsLoading(false)} />) : (<>{children}</>)} */}
+
+        {children}
       </body>
     </html>
   );
