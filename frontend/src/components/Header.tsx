@@ -19,7 +19,7 @@ export const Header = () => {
                         <span className="">EcoChamp</span>
                     </Link>
                     <Link
-                        href="#"
+                        href="/image-recognition"
                         className="text-muted-foreground transition-colors hover:text-foreground"
                     >
                         Classify

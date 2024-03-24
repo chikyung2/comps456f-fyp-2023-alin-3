@@ -6,13 +6,23 @@ import { Image as ImageIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Form } from "@/components/ui/form";
-import { FormRecognize } from "@/components/FormRecognize";
+import { ImageUploadForm } from "@/components/ImageUploadForm";
 import { useState } from 'react';
+import { Dropzone } from '@/components/ui/dropzone';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [result, setResult] = useState(null);
   const [image, setImage] = useState(null);
+  const [files, setFiles] = useState<string[]>([]);
 
   const handleFileChange = (e) => {
     const file = event.target.files[0];
@@ -21,7 +31,7 @@ export default function Home() {
   }
 
   const handleSubmit = async () => {
-    if (!selectedImage) return 
+    if (!selectedImage) return
 
     const formData = new FormData();
     formData.append('image', selectedImage);
@@ -50,25 +60,45 @@ export default function Home() {
 
       <div className="border rounded-lg shadow-sm p-4">
         <div className="flex flex-col gap-4">
-          <Input type="file" accept="image/x-png,image/jpeg" onChange={handleFileChange} />
+          {image ? <Image src={image} alt="Selected Image" width={0} height={0} className="w-full h-auto" /> : (
+            <Input type="file" accept=".jpeg, .png" onChange={handleFileChange} />)}
 
           {/* <Button className="w-full">Select Image</Button> */}
-          <div className="flex gap-2">
-            <Button className="flex-1" onClick={handleSubmit}>Submit</Button>
+          <div className="flex max-md:flex-col gap-2">
+            <Button type='submit' className="flex-1" onClick={handleSubmit}>Predict</Button>
             <Button className="flex-1">Reset</Button>
           </div>
         </div>
       </div>
-      {image && (
-        <Image src={image} alt="Selected Image" width={300} height={300} />
-      )}
+      {/* <ImageUploadForm /> */}
       {result && (
         <div>
-          <h2>Result JSON:</h2>
-          <pre>{JSON.stringify(result, null, 2)}</pre>
+          <h2 className="text-xl font-semibold">Result</h2>
+          {/* <pre>{JSON.stringify(result, null, 2)}</pre> */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Recyclable</CardTitle>
+              <CardDescription>Predicted paper bag with 80% confidence</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>Recyclable Type: Paper</p>
+              <p>Item: Paper bag (predicted with 80% confidence)</p>
+              <p>Recycling Tips: Remove non-paper materials, Keep dry.</p>
+            </CardContent>
+            <CardFooter>
+              <p>Is it correct?</p>
+            </CardFooter>
+          </Card>
         </div>
       )}
-      {/* <FormRecognize /> */}
+      {/* <Dropzone
+        onChange={setFiles}
+        className="w-full"
+        fileExtension="image/*"
+      />
+      {files.map((file) => (
+        <Image key={file} src={files} alt="Uploaded File" width={300} height={300} />
+      ))} */}
 
 
 
