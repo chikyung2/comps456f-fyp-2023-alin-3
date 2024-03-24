@@ -42,8 +42,9 @@ export default function RootLayout({
       )}>
         <Header />
         {/* {isLoading && isHome ? (<SplashScreen finishLoading={() => setIsLoading(false)} />) : (<>{children}</>)} */}
-
-        {children}
+        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+          {children}
+        </main>
       </body>
     </html>
   );
