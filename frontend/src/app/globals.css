@@ -57,7 +57,15 @@
     @apply border-border;
   }
   body {
+    background-image: url(/img/BG.png);
+    background-size: cover;
     @apply bg-background text-foreground;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-image: url(/img/BG2.png);
+    }
   }
 }
 
