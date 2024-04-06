@@ -1,0 +1,10 @@
+.cta {
+  position: relative;
+  display: inline-flex;
+  font-size: 15px;
+  cursor: pointer;
+  background-image: linear-gradient(225deg, #32c5ff, #b620e0 51%, #f7b500);
+  align-items: center;
+  height: 35px;
+}
+

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 import { Button } from './ui/button'
 import { Menu } from 'lucide-react'
+import './ui/button.css'
 
 
 export const Header = () => {
@@ -18,7 +19,7 @@ export const Header = () => {
                         {/* <Package2 className="h-6 w-6" /> */}
                         <span className="">EcoChamp</span>
                     </Link>
-                    <Button asChild className="ml-auto">
+                    <Button asChild className="cta ml-auto">
                         <Link href="/image-recognition">Waste Classify</Link>
                     </Button>
 
@@ -47,7 +48,7 @@ export const Header = () => {
                     </SheetTrigger>
                     <SheetContent side="right">
                         <nav className="grid gap-6 text-lg font-medium">
-                            <Link href="#" className="hover:text-foreground">
+                            <Link href="/image-recognition" className="hover:text-foreground">
                                 Waste Classify
                             </Link>
                         </nav>
