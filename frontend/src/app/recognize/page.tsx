@@ -1,19 +1,12 @@
 'use client'
-import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
-import { Image as ImageIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Form } from "@/components/ui/form";
-import { ImageUploadForm } from "@/components/ImageUploadForm";
 import { useState } from 'react';
-import { Dropzone } from '@/components/ui/dropzone';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -22,7 +15,7 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert"
-import { CircleCheck, Upload } from "lucide-react"
+import { Image as ImageIcon, CircleCheck } from "lucide-react"
 
 interface ApiResponse {
   confidence: number;
@@ -89,8 +82,8 @@ export default function Page() {
                 {uploadedImage ? <Image src={uploadedImage} alt="Selected Image" width={0} height={0} className="w-full max-h-96 object-cover" /> : (
                   <label htmlFor="upload" className="gap-2 w-full h-40 border-dashed border-2 border-muted-foreground flex flex-col items-center justify-center cursor-pointer">
                     <Input type="file" accept="image/*" onChange={handleFileChange} className="hidden" id="upload" />
-                    <Upload className="text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Drag & drop or click here to upload</span>
+                    <ImageIcon className="text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">Click here to upload</span>
                   </label>)}
 
                 {result ? (
