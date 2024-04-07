@@ -1,0 +1,134 @@
+'use client'
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { Image as ImageIcon } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Form } from "@/components/ui/form";
+import { ImageUploadForm } from "@/components/ImageUploadForm";
+import { useState } from 'react';
+import { Dropzone } from '@/components/ui/dropzone';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
+import { CircleCheck, Upload } from "lucide-react"
+
+interface ApiResponse {
+  confidence: number;
+  info: string;
+  item: string;
+  type: string;
+}
+
+export default function Page() {
+  const [file, setFile] = useState(null);
+  const [result, setResult] = useState<ApiResponse | null>(null);
+  const [uploadedImage, setUploadedImage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleFileChange = (e: any) => {
+    const file = e.target.files[0];
+    setUploadedImage(URL.createObjectURL(file))
+    setFile(file);
+  }
+
+  const handleSubmit = async () => {
+    if (!file) return
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append('image', file);
+
+    try {
+      const response = await fetch('http://127.0.0.1:8080/recognize', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+      setResult(data);
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  const resetState = () => {
+    setFile(null);
+    setUploadedImage("");
+    setResult(null);
+  };
+
+  const toPercentage = (confidence: any) => {
+    return Math.round(confidence * 100 * 10) / 10;
+  };
+
+  return (
+    <>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center gap-6">
+          <Card className="w-full max-w-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl">Classify an item</CardTitle>
+              <CardDescription>Take a photo with camera or select from the gallery. Easily know the category of the waste.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-col gap-4">
+                {uploadedImage ? <Image src={uploadedImage} alt="Selected Image" width={0} height={0} className="w-full max-h-96 object-cover" /> : (
+                  <label htmlFor="upload" className="gap-2 w-full h-40 border-dashed border-2 border-muted-foreground flex flex-col items-center justify-center cursor-pointer">
+                    <Input type="file" accept="image/*" onChange={handleFileChange} className="hidden" id="upload" />
+                    <Upload className="text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">Drag & drop or click here to upload</span>
+                  </label>)}
+
+                {result ? (
+                  <>
+                    <div className="text-md">
+                      Predicted {result.type} with {toPercentage(result.confidence)}% confidence
+                    </div>
+                    <Alert variant="info">
+                      <CircleCheck className="primary h-4 w-4" />
+                      <AlertTitle>Recycle out of home/Bin it</AlertTitle>
+                      <AlertDescription>
+                        {result.type} can be recycled at some out of home locations - find out more recycling tips below.
+                      </AlertDescription>
+                    </Alert>
+
+                    <Button className="flex-1" onClick={resetState}>Check another item</Button>
+                  </>
+                ) : (<div className="flex max-md:flex-col gap-2">
+                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>Check</Button>
+                  <Button className="flex-1" onClick={resetState}>Reset</Button>
+                </div>)}
+              </div>
+            </CardContent>
+          </Card>
+
+          {result && (
+            <Card className="w-full max-w-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl">How to recycle {result?.type}</CardTitle>
+                {/* <CardDescription>Take a photo with camera or select from the gallery. Easily know the category of the waste.</CardDescription> */}
+              </CardHeader>
+              <CardContent>
+                <p dangerouslySetInnerHTML={{ __html: result.info }}></p>
+              </CardContent>
+            </Card>)
+          }
+        </div>
+      </div>
+    </>
+  );
+}
