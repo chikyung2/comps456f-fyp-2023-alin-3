@@ -48,7 +48,7 @@ export const Header = () => {
                     </SheetTrigger>
                     <SheetContent side="right">
                         <nav className="grid gap-6 text-lg font-medium">
-                            <Link href="/image-recognition" className="hover:text-foreground">
+                            <Link href="/recognize" className="hover:text-foreground">
                                 Waste Classify
                             </Link>
                         </nav>
