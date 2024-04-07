@@ -1,19 +1,34 @@
 {
-    "0": { "type": "compost", "info": "Dispose in compost bin." },
-    "1": { "type": "plastic", "info": "Recycle if possible." },
+    "0": {
+        "type": "compost",
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
+    },
+    "1": {
+        "type": "plastic",
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
+    },
     "2": {
         "type": "hazardous",
-        "info": "Dispose of properly to prevent environmental contamination."
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
     },
-    "3": { "type": "organic", "info": "Compostable." },
+    "3": {
+        "type": "organic",
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
+    },
     "4": {
         "type": "metal",
-        "info": "Recyclable if made of aluminum or steel."
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
     },
-    "5": { "type": "paper", "info": "Recycle if possible." },
+    "5": {
+        "type": "paper",
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
+    },
     "6": {
         "type": "textile",
-        "info": "Donate or recycle at textile recycling facilities."
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
     },
-    "7": { "type": "glass", "info": "Recyclable if clean." }
+    "7": {
+        "type": "glass",
+        "info": "Which paper items can be recycled? Here's some information about paper recycling. Recycling paper helps to save trees and reduce waste. Learn more about paper recycling at <a href='https://www.example.com/paper-recycling' target='_blank' rel='noopener noreferrer'>example.com</a>."
+    }
 }
