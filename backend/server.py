@@ -1,3 +1,4 @@
+import json
 from flask import Flask, request, jsonify
 from ultralytics import YOLO
 from PIL import Image
@@ -7,44 +8,34 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['GET'])
-def index():
-    with open('index.html', 'r') as f:
-        return f.read()
+# Load waste mapping and type info
+with open("waste_dict.json", "r") as f:
+    waste_dict = json.load(f)
 
-@app.route('/upload', methods=['POST'])
-def upload():
-    if 'image' not in request.files:
-        return jsonify({'error': 'No image provided'})
-    
-    image = request.files['image']
-    image_data = image.read()
-    text = request.form['text']
-    location = request.form['location']
-    
-    return jsonify({'message': 'Image uploaded successfully'})
+with open("waste_type_info.json", "r") as f:
+    waste_type_info = json.load(f)
 
 
 @app.route('/recognize', methods=['POST'])
 def recognize():
     image = request.files["image"]
-    result = classify_on_image(image.stream)
-    print(result)
+    result = classify_image(image.stream)
+
     return jsonify(result)
 
 
-def classify_on_image(buffer):
-    model = YOLO("./model/best.pt")
+def classify_image(buffer):
+    model = YOLO("./model.pt")
     results = model.predict(Image.open(buffer))
     result = results[0]
 
-    names_dict = result.names
-    probs = result.probs
+    predicted_class_index = result.probs.top1
+    # item_name = waste_dict[str(predicted_class_index)]["name"]
+    waste_category_index = waste_dict[str(predicted_class_index)]["type"]
+    waste_category = waste_type_info[str(waste_category_index)]["type"]
+    waste_info = waste_type_info[str(waste_category_index)]["info"]
 
-    top1_class = names_dict[probs.top1]
-    top1_score = probs.top1conf.item()
-
-    return {"top1_class": top1_class, "top1_score": top1_score}
+    return {"item": result.names[predicted_class_index], "confidence": result.probs.top1conf.item(), "type": waste_category, "info": waste_info}
 
 
 if __name__ == '__main__':

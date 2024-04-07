@@ -1,0 +1,19 @@
+{
+    "0": { "type": "compost", "info": "Dispose in compost bin." },
+    "1": { "type": "plastic", "info": "Recycle if possible." },
+    "2": {
+        "type": "hazardous",
+        "info": "Dispose of properly to prevent environmental contamination."
+    },
+    "3": { "type": "organic", "info": "Compostable." },
+    "4": {
+        "type": "metal",
+        "info": "Recyclable if made of aluminum or steel."
+    },
+    "5": { "type": "paper", "info": "Recycle if possible." },
+    "6": {
+        "type": "textile",
+        "info": "Donate or recycle at textile recycling facilities."
+    },
+    "7": { "type": "glass", "info": "Recyclable if clean." }
+}
