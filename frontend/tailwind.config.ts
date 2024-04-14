@@ -11,6 +11,9 @@ const config = {
     ],
     prefix: '',
     theme: {
+        fontSize: {
+            '6xl': '2.5rem',
+        },
         container: {
             center: true,
             padding: '2rem',
