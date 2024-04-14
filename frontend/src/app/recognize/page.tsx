@@ -74,8 +74,8 @@ export default function Page() {
         <div className="flex flex-col items-center gap-6">
           <Card className="w-full max-w-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">Classify an item</CardTitle>
-              <CardDescription>Take a photo with camera or select from the gallery. Easily know the category of the waste.</CardDescription>
+              <CardTitle className="text-2xl">分類物品</CardTitle>
+              <CardDescription>拿起相機拍照或從圖庫中選擇照片。輕鬆知道廢棄物的類別。</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-col gap-4">
@@ -83,7 +83,7 @@ export default function Page() {
                   <label htmlFor="upload" className="gap-2 w-full h-40 border-dashed border-2 border-muted-foreground flex flex-col items-center justify-center cursor-pointer">
                     <Input type="file" accept="image/*" onChange={handleFileChange} className="hidden" id="upload" />
                     <ImageIcon className="text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Click here to upload</span>
+                    <span className="text-sm text-muted-foreground">點擊上傳</span>
                   </label>)}
 
                 {result ? (
@@ -99,11 +99,11 @@ export default function Page() {
                       </AlertDescription>
                     </Alert>
 
-                    <Button className="flex-1" onClick={resetState}>Check another item</Button>
+                    <Button className="flex-1" onClick={resetState}>查詢其他物件</Button>
                   </>
                 ) : (<div className="flex max-md:flex-col gap-2">
-                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>Check</Button>
-                  <Button className="flex-1" onClick={resetState}>Reset</Button>
+                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>查詢</Button>
+                  <Button className="flex-1" onClick={resetState}>重置</Button>
                 </div>)}
               </div>
             </CardContent>
