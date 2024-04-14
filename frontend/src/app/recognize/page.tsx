@@ -15,13 +15,20 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert"
-import { Image as ImageIcon, CircleCheck } from "lucide-react"
+import { Image as ImageIcon, CircleCheck, CircleX } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface ApiResponse {
-  confidence: number;
-  info: string;
-  item: string;
-  type: string;
+  details: {
+    type: string,
+    info: string,
+    icon: string,
+    recyclable: boolean
+  },
+  prediction: {
+    confidence: number;
+    name: string;
+  }
 }
 
 export default function Page() {
@@ -89,15 +96,25 @@ export default function Page() {
                 {result ? (
                   <>
                     <div className="text-md">
-                      Predicted {result.type} with {toPercentage(result.confidence)}% confidence
+                      Predicted {result.details.type} with {toPercentage(result.prediction.confidence)}% confidence
                     </div>
-                    <Alert variant="info">
-                      <CircleCheck className="primary h-4 w-4" />
-                      <AlertTitle>Recycle out of home/Bin it</AlertTitle>
-                      <AlertDescription>
-                        {result.type} can be recycled at some out of home locations - find out more recycling tips below.
-                      </AlertDescription>
-                    </Alert>
+                    {result.details.recyclable ? (
+                      <Alert variant="info">
+                        <CircleCheck className="primary h-4 w-4" />
+                        <AlertTitle>Recycle out of home</AlertTitle>
+                        <AlertDescription>
+                          {result.details.type} can be recycled at some out of home locations - find out more recycling tips below.
+                        </AlertDescription>
+                      </Alert>
+                    ) : (
+                      <Alert variant="destructive">
+                        <CircleX className="primary h-4 w-4" />
+                        <AlertTitle>Bin it</AlertTitle>
+                        <AlertDescription>
+                          {result.details.type} can not be recycled. Throw it to the bin.
+                        </AlertDescription>
+                      </Alert>
+                    )}
 
                     <Button className="flex-1" onClick={resetState}>查詢其他物件</Button>
                   </>
@@ -109,14 +126,19 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          {result && (
+          {result && result.details && (
             <Card className="w-full max-w-lg">
               <CardHeader>
-                <CardTitle className="text-2xl">How to recycle {result?.type}</CardTitle>
+                <Avatar>
+                  <AvatarImage src={`/img/${result.details.icon}`} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+                <CardTitle className="text-2xl">How to recycle {result?.details.type}
+                </CardTitle>
                 {/* <CardDescription>Take a photo with camera or select from the gallery. Easily know the category of the waste.</CardDescription> */}
               </CardHeader>
               <CardContent>
-                <p dangerouslySetInnerHTML={{ __html: result.info }}></p>
+                <p dangerouslySetInnerHTML={{ __html: result.details.info }}></p>
               </CardContent>
             </Card>)
           }
