@@ -65,6 +65,9 @@
   @media (max-width: 768px) {
     body {
       background-image: url(/img/BG2.png);
+     .text-6xl {
+        font-size: 2.5rem;
+      }
     }
   }
 }
