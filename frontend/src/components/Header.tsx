@@ -23,8 +23,8 @@ export const Header = () => {
                 
                 {/* <div className="flex-1"></div> */}
 
-                <Button asChild className="ml-auto">
-                    <Link href="/recognize">Waste Classify</Link>
+                <Button asChild className="cta">
+                    <Link href="/recognize">垃圾分類</Link>
                 </Button>
             </header>
         </div>
