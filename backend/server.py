@@ -30,12 +30,9 @@ def classify_image(buffer):
     result = results[0]
 
     predicted_class_index = result.probs.top1
-    # item_name = waste_dict[str(predicted_class_index)]["name"]
     waste_category_index = waste_dict[str(predicted_class_index)]["type"]
-    waste_category = waste_type_info[str(waste_category_index)]["type"]
-    waste_info = waste_type_info[str(waste_category_index)]["info"]
 
-    return {"item": result.names[predicted_class_index], "confidence": result.probs.top1conf.item(), "type": waste_category, "info": waste_info}
+    return {"prediction": {"name": result.names[predicted_class_index], "confidence": result.probs.top1conf.item()}, "details": waste_type_info[str(waste_category_index)]}
 
 
 if __name__ == '__main__':

@@ -2,96 +2,115 @@
     "0": {
         "type": "plastic toy",
         "icon": "collection_pt_icon-03.png",
-        "info": "部分完好塑膠玩具為可重用物資，鼓勵市民捐贈予有需要人士及機構(回收地址請瀏覽：<a href='https://www.fwd.com.hk/zh/blog/lifestyle/where-to-donate-toys-in-hong-kong/' target='_blank' rel='noopener noreferrer'>4間二手玩具回收機構</a>)。若玩具已損壞未能重用，則回收前需要先把金屬配件與塑膠分開（例如拆螺絲)。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A33' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：塑膠</a>)。由橡膠、矽膠及複合物料製成的玩具則不適合回收。"
+        "info": "部分完好塑膠玩具為可重用物資，鼓勵市民捐贈予有需要人士及機構(回收地址請瀏覽：<a href='https://www.fwd.com.hk/zh/blog/lifestyle/where-to-donate-toys-in-hong-kong/' target='_blank' rel='noopener noreferrer'>4間二手玩具回收機構</a>)。若玩具已損壞未能重用，則回收前需要先把金屬配件與塑膠分開（例如拆螺絲)。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A33' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：塑膠</a>)。由橡膠、矽膠及複合物料製成的玩具則不適合回收。",
+        "recyclable": true
     },
     "1": {
-        "type": "plastic_normal",
+        "type": "plastic normal",
         "icon": "collection_pt_icon-03.png",
-        "info": "一般家居廢塑膠均可回收，即各類飲品樽、個人護理用品樽、清潔液樽、膠袋、膠餐具、塑膠容器、包裝膠物料、光碟、光碟盒、發泡膠等。回收前需要沖洗乾淨和清空。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A33' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：塑膠</a>)。"
+        "info": "一般家居廢塑膠均可回收，即各類飲品樽、個人護理用品樽、清潔液樽、膠袋、膠餐具、塑膠容器、包裝膠物料、光碟、光碟盒、發泡膠等。回收前需要沖洗乾淨和清空。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A33' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：塑膠</a>)。",
+        "recyclable": true
     },
     "2": {
         "type": "hazardous",
         "icon": "no.png",
-        "info": "煙頭、乾電池、化學品、藥品等均為危險物品，無法透過一般回收渠道處理，為以確保用戶和環境的安全，請務必依照安全規程妥善棄置。"
+        "info": "煙頭、乾電池、化學品、藥品等均為危險物品，無法透過一般回收渠道處理，為以確保用戶和環境的安全，請務必依照安全規程妥善棄置。",
+        "recyclable": false
     },
     "3": {
-        "type": "organic",
+        "type": "food waste",
         "icon": "FoodWaste.png",
-        "info": "廚餘在回收前，必須花點時間處理和分類。魚類：魚類的器官和腸臟、魚鱗、有殼海產、小型骨頭。肉類：切屑的肉類、肉類脂肪和、禽畜內臟、殘餘物。蔬果：腐爛的生果蔬菜、蔬果皮和配菜。穀類：米、麵和燕麥。其他：茶葉、咖啡渣、湯渣、中藥渣、蛋殻、蛋糕、麵包。<p></p>特別注意: 過硬或過大的骨、殼（例如龍蝦殼、貝殼、比拳頭大或長的骨頭），以及膠袋、餐具、容器、紙巾、包裝等非廚餘物質，不應放進廚餘回收桶；另外，將廚餘分類後盡量將當中的水分瀝乾，才放進回收桶，而如果無法即時放進回收桶，先放進雪櫃冷藏可免產生臭味。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A129' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：廚餘</a>)。"
+        "info": "廚餘在回收前，必須花點時間處理和分類。魚類：魚類的器官和腸臟、魚鱗、有殼海產、小型骨頭。肉類：切屑的肉類、肉類脂肪和、禽畜內臟、殘餘物。蔬果：腐爛的生果蔬菜、蔬果皮和配菜。穀類：米、麵和燕麥。其他：茶葉、咖啡渣、湯渣、中藥渣、蛋殻、蛋糕、麵包。<p></p>特別注意: 過硬或過大的骨、殼（例如龍蝦殼、貝殼、比拳頭大或長的骨頭），以及膠袋、餐具、容器、紙巾、包裝等非廚餘物質，不應放進廚餘回收桶；另外，將廚餘分類後盡量將當中的水分瀝乾，才放進回收桶，而如果無法即時放進回收桶，先放進雪櫃冷藏可免產生臭味。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A129' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：廚餘</a>)。",
+        "recyclable": true
     },
     "4": {
         "type": "metal",
         "icon": "collection_pt_icon-01.png",
-        "info": "鐵罐、鋁罐及其他金屬（如奶粉罐、盆菜盤、金屬麵包夾、錫紙等）均可回收。回收前需要清洗乾淨。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A31' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：金屬</a>)。"
+        "info": "鐵罐、鋁罐及其他金屬（如奶粉罐、盆菜盤、金屬麵包夾、錫紙等）均可回收。回收前需要清洗乾淨。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A31' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：金屬</a>)。",
+        "recyclable": true
     },
     "5": {
         "type": "paper",
         "icon": "collection_pt_icon-02.png",
-        "info": "報紙書刊、辦公室用紙、瓦通紙（即紙皮）均可回收，其他類型的廢紙（如教科書、補充練習、學校筆記簿）等亦可回收。回收前需要去膠紙、除雜質（如萬字夾、書釘等），並且切勿濕水。不確定的廢紙，不宜交到「綠在區區」。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A32' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：廢紙</a>)。"
+        "info": "報紙書刊、辦公室用紙、瓦通紙（即紙皮）均可回收，其他類型的廢紙（如教科書、補充練習、學校筆記簿）等亦可回收。回收前需要去膠紙、除雜質（如萬字夾、書釘等），並且切勿濕水。不確定的廢紙，不宜交到「綠在區區」。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A32' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：廢紙</a>)。",
+        "recyclable": true
     },
     "6": {
         "type": "pot",
         "icon": "collection_pt_icon-01.png",
-        "info": "回收前，請拆除金屬以外嘅部份(例如膠柄或木柄位置)，就可以當金屬回收。<p></p>如有完整無缺、配件齊全又潔淨的廚具，不妨考慮重用。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A31' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：金屬</a>)。"
+        "info": "回收前，請拆除金屬以外嘅部份(例如膠柄或木柄位置)，就可以當金屬回收。<p></p>如有完整無缺、配件齊全又潔淨的廚具，不妨考慮重用。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A31' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：金屬</a>)。",
+        "recyclable": true
     },
     "7": {
         "type": "glass",
         "icon": "collection_pt_icon-04.png",
-        "info": "各類飲品樽、醬料樽及食品樽均可回收。回收前需要移除樽蓋及清洗乾淨。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A34' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：玻璃樽</a>）。"
+        "info": "各類飲品樽、醬料樽及食品樽均可回收。回收前需要移除樽蓋及清洗乾淨。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A34' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：玻璃樽</a>）。",
+        "recyclable": true
     },
     "8": {
-        "type": "plastic_special",
+        "type": "plastic special",
         "icon": "nonplas.png",
-        "info": "膠袋、膠餐具、飲管、食物盒、即棄塑膠食物容器、乳酪杯、膠樽蓋、膠桶、CD碟／盒、手機套包裝膠盒等。以上非樽類廢膠，可送往各區由環保署資助非牟利團體營運的社區環保站「綠在區區」所設置的塑膠分類回收桶。不同的地區每週亦設有流動回收站，方便居民回收。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/waste-reduction-programme/greencommunity#locator' target='_blank' rel='noopener noreferrer'>香港減廢網站：綠在區區</a>)。"
+        "info": "膠袋、膠餐具、飲管、食物盒、即棄塑膠食物容器、乳酪杯、膠樽蓋、膠桶、CD碟／盒、手機套包裝膠盒等。以上非樽類廢膠，可送往各區由環保署資助非牟利團體營運的社區環保站「綠在區區」所設置的塑膠分類回收桶。不同的地區每週亦設有流動回收站，方便居民回收。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/waste-reduction-programme/greencommunity#locator' target='_blank' rel='noopener noreferrer'>香港減廢網站：綠在區區</a>)。",
+        "recyclable": true
     },
     "9": {
         "type": "unrecyclable",
         "icon": "nonrecyc.png",
-        "info": "這些物品不適合放入回收箱,請另行處理。"
+        "info": "這些物品不適合放入回收箱,請另行處理。",
+        "recyclable": false
     },
     "10": {
         "type": "disposable meal box",
         "icon": "nonplas.png",
-        "info": "食物盒、即棄塑膠食物容器。以上非樽類廢膠，可送往各區由環保署資助非牟利團體營運的社區環保站「綠在區區」所設置的塑膠分類回收桶。不同的地區每週亦設有流動回收站，方便居民回收。<p></p>發泡膠回收: 環保署轄下的「綠在區區」不同服務點，均有回收各種塑膠、發泡膠、生果網。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/waste-reduction-programme/greencommunity#locator' target='_blank' rel='noopener noreferrer'>香港減廢網站：綠在區區</a>)。"
+        "info": "食物盒、即棄塑膠食物容器。以上非樽類廢膠，可送往各區由環保署資助非牟利團體營運的社區環保站「綠在區區」所設置的塑膠分類回收桶。不同的地區每週亦設有流動回收站，方便居民回收。<p></p>發泡膠回收: 環保署轄下的「綠在區區」不同服務點，均有回收各種塑膠、發泡膠、生果網。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/waste-reduction-programme/greencommunity#locator' target='_blank' rel='noopener noreferrer'>香港減廢網站：綠在區區</a>)。",
+        "recyclable": true
     },
     "11": {
-        "type": "recyclable_battery",
+        "type": "recyclable battery",
         "icon": "collection_pt_icon-06.png",
-        "info": "由家居產生的便攜式充電池，例如用於手提電話，手提或平板電腦的鋰充電池、鎳氫充電池及鎳鎘充電池均可回收。不接受即棄電池（一次性電池）（如鹼性電池、碳鋅電池、鈕扣電池等）、鉛酸電池及汽車電池。為安全起見，在回收前請於充電池的金屬端子上貼上膠紙，以防止在儲存及運送中意外觸碰金屬端子，造成危險。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A13' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：充電池</a>)。"
+        "info": "由家居產生的便攜式充電池，例如用於手提電話，手提或平板電腦的鋰充電池、鎳氫充電池及鎳鎘充電池均可回收。不接受即棄電池（一次性電池）（如鹼性電池、碳鋅電池、鈕扣電池等）、鉛酸電池及汽車電池。為安全起見，在回收前請於充電池的金屬端子上貼上膠紙，以防止在儲存及運送中意外觸碰金屬端子，造成危險。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A13' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：充電池</a>)。",
+        "recyclable": true
     },
     "12": {
         "type": "used_clothes",
         "icon": "collection_pt_icon-09.png",
-        "info": "適合回收: 清潔的衣服 (全新或二手皆可) 鞋、手袋或背包、配飾 (如頸巾)、同時亦收集碳粉匣及墨盒。不適合回收: 破損不潔的衣物、傢俬、制服、窗簾、床褥或床上用品、二手內衣／毛巾／襪等貼身衣物、 皮草產品及活動Tee。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A38' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：舊衣</a>)。"
+        "info": "適合回收: 清潔的衣服 (全新或二手皆可) 鞋、手袋或背包、配飾 (如頸巾)、同時亦收集碳粉匣及墨盒。不適合回收: 破損不潔的衣物、傢俬、制服、窗簾、床褥或床上用品、二手內衣／毛巾／襪等貼身衣物、 皮草產品及活動Tee。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A38' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：舊衣</a>)。",
+        "recyclable": true
     },
     "13": {
         "type": "cosmetic bottle",
         "icon": "collection_pt_icon-03.png",
-        "info": "一般家居廢塑膠均可回收，即各類飲品樽、個人護理用品樽、清潔液樽、膠袋、膠餐具、塑膠容器、包裝膠物料、光碟、光碟盒、發泡膠等。回收前需要沖洗乾淨和清空。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A33' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：塑膠</a>)。<p></p>此外，有時候亦會舉辦一些化妝品瓶回收活動，詳情請自行留意<a href='https://www.google.com/search?q=化妝品瓶回收環保&client=opera-gx&sca_esv=e578d9453acfd45f&sca_upv=1&biw=1399&bih=770&sxsrf=ACQVn09scGlCcsV9-_aLIYmvmAmbWCvjGQ%3A1713079514646&ei=2oQbZrjcJvuO2roP5dCIkAo&ved=0ahUKEwi4scS_lsGFAxV7h1YBHWUoAqIQ4dUDCBA&oq=化妝品瓶回收環保&gs_lp=Egxnd3Mtd2l6LXNlcnAiGOWMluWmneWTgeeTtuWbnuaUtueSsOS_nUgAUABYAHAAeACQAQCYAQCgAQCqAQC4AQzIAQCYAgCgAgCYAwCSBwCgBwA&sclient=gws-wiz-serp'>Google搜尋:化妝品瓶回收環保</a>."
+        "info": "一般家居廢塑膠均可回收，即各類飲品樽、個人護理用品樽、清潔液樽、膠袋、膠餐具、塑膠容器、包裝膠物料、光碟、光碟盒、發泡膠等。回收前需要沖洗乾淨和清空。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A33' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：塑膠</a>)。<p></p>此外，有時候亦會舉辦一些化妝品瓶回收活動，詳情請自行留意<a href='https://www.google.com/search?q=化妝品瓶回收環保&client=opera-gx&sca_esv=e578d9453acfd45f&sca_upv=1&biw=1399&bih=770&sxsrf=ACQVn09scGlCcsV9-_aLIYmvmAmbWCvjGQ%3A1713079514646&ei=2oQbZrjcJvuO2roP5dCIkAo&ved=0ahUKEwi4scS_lsGFAxV7h1YBHWUoAqIQ4dUDCBA&oq=化妝品瓶回收環保&gs_lp=Egxnd3Mtd2l6LXNlcnAiGOWMluWmneWTgeeTtuWbnuaUtueSsOS_nUgAUABYAHAAeACQAQCYAQCgAQCqAQC4AQzIAQCYAgCgAgCYAwCSBwCgBwA&sclient=gws-wiz-serp'>Google搜尋:化妝品瓶回收環保</a>.",
+        "recyclable": true
     },
     "14": {
         "type": "plastic hanger",
         "icon": "nonrecyc.png",
-        "info": "衣架不適合放入回收箱。如果完整無缺，不妨考慮重用或送回洗衣店。"
+        "info": "衣架不適合放入回收箱。如果完整無缺，不妨考慮重用或送回洗衣店。",
+        "recyclable": false
     },
     "15": {
         "type": "small electronic devices",
         "icon": "collection_pt_icon-07.png",
-        "info": "一般小型家用電器（如電風扇、咖啡機、吸塵機、風筒、微波爐等）均可回收，其他類型的小型電器（如藍芽耳機、電子辭典、電腦硬碟、遊戲機、手提 ／固網電話、USB線、電線和拖板等）亦可回收。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A39' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：小型電器</a>)。    "
+        "info": "一般小型家用電器（如電風扇、咖啡機、吸塵機、風筒、微波爐等）均可回收，其他類型的小型電器（如藍芽耳機、電子辭典、電腦硬碟、遊戲機、手提 ／固網電話、USB線、電線和拖板等）亦可回收。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A39' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：小型電器</a>)。    ",
+        "recyclable": true
     },
     "16": {
         "type": "medicines",
         "icon": "no.png",
-        "info": "藥品為危險物品，為以確保用戶和環境的安全，請小心處理這些危險物品。<p></p>此外，有時候亦會舉辦一些藥物回收活動，詳情請自行留意<a href='https://www.google.com/search?q=香港藥物回收&client=opera-gx&sca_esv=e578d9453acfd45f&sca_upv=1&biw=1399&bih=770&sxsrf=ACQVn0_DGOj5a3OwnxE0K6nBq6io5m3XWg%3A1713010411864&ei=63YaZvWhNN7l2roProSQsAI&ved=0ahUKEwi1w-GIlb-FAxXeslYBHS4CBCYQ4dUDCBA&uact=5&oq=香港藥物回收&gs_lp=Egxnd3Mtd2l6LXNlcnAiEummmea4r-iXpeeJqeWbnuaUtjIKECMYgAQYigUYJzIFEAAYgAQyBRAAGIAEMggQABiABBiiBDIIEAAYgAQYogRIhBBQnQpY1QtwA3gAkAEAmAFSoAHaAaoBATO4AQPIAQD4AQGYAgWgAq0BwgIKEAAYRxjWBBiwA5gDAIgGAZAGCpIHATWgB6sN&sclient=gws-wiz-serp' target='_blank' rel='noopener noreferrer'>Google搜尋:香港藥物回收</a>."
+        "info": "藥品為危險物品，為以確保用戶和環境的安全，請小心處理這些危險物品。<p></p>此外，有時候亦會舉辦一些藥物回收活動，詳情請自行留意<a href='https://www.google.com/search?q=香港藥物回收&client=opera-gx&sca_esv=e578d9453acfd45f&sca_upv=1&biw=1399&bih=770&sxsrf=ACQVn0_DGOj5a3OwnxE0K6nBq6io5m3XWg%3A1713010411864&ei=63YaZvWhNN7l2roProSQsAI&ved=0ahUKEwi1w-GIlb-FAxXeslYBHS4CBCYQ4dUDCBA&uact=5&oq=香港藥物回收&gs_lp=Egxnd3Mtd2l6LXNlcnAiEummmea4r-iXpeeJqeWbnuaUtjIKECMYgAQYigUYJzIFEAAYgAQyBRAAGIAEMggQABiABBiiBDIIEAAYgAQYogRIhBBQnQpY1QtwA3gAkAEAmAFSoAHaAaoBATO4AQPIAQD4AQGYAgWgAq0BwgIKEAAYRxjWBBiwA5gDAIgGAZAGCpIHATWgB6sN&sclient=gws-wiz-serp' target='_blank' rel='noopener noreferrer'>Google搜尋:香港藥物回收</a>.",
+        "recyclable": true
     },
     "17": {
         "type": "beverage carton",
         "icon": "collection_pt_icon-11.png",
-        "info": "牛奶盒、鋁箔盒、紙杯及紙碟均可回收。回收前需移除其他雜質、沖洗乾淨和清空。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A59' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：紙包飲品盒</a>)。"
+        "info": "牛奶盒、鋁箔盒、紙杯及紙碟均可回收。回收前需移除其他雜質、沖洗乾淨和清空。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A59' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：紙包飲品盒</a>)。",
+        "recyclable": true
     },
     "18": {
         "type": "paper bag",
         "icon": "collection_pt_icon-02.png",
-        "info": "回收前請注意：膠塗層紙袋不可回收，紙袋表面有塑膠膜或塑膠塗層的，不能放到回收箱。紙收質純的紙袋可回收，沒有特殊塗層，純紙質製成的紙袋，通常可以放入回收箱。如果不確定某個紙袋是否可回收，可以查看袋身標籤。上面通常會標明材質或者回收指示。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A32' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：廢紙</a>)。"
+        "info": "回收前請注意：膠塗層紙袋不可回收，紙袋表面有塑膠膜或塑膠塗層的，不能放到回收箱。紙收質純的紙袋可回收，沒有特殊塗層，純紙質製成的紙袋，通常可以放入回收箱。如果不確定某個紙袋是否可回收，可以查看袋身標籤。上面通常會標明材質或者回收指示。<p></p>(回收地址請瀏覽：<a href='https://www.wastereduction.gov.hk/zh-hk/recycling-map?f%5B0%5D=material%3A32' target='_blank' rel='noopener noreferrer'>香港減廢網站：回收互動地圖：廢紙</a>)。",
+        "recyclable": true
     }
 }
