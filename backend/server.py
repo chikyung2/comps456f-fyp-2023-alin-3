@@ -12,7 +12,7 @@ CORS(app)
 with open("waste_dict.json", "r") as f:
     waste_dict = json.load(f)
 
-with open("waste_type_info.json", "r") as f:
+with open("waste_type_info.json", "r", encoding="utf-8") as f:
     waste_type_info = json.load(f)
 
 
