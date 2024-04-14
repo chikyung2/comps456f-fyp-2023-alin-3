@@ -24,19 +24,19 @@ export default function Home() {
   return(
 
   <div className="flex flex-col items-center justify-center py-8" >
-    <h1 className="text-4xl font-bold mb-4 text-gray-800" style={{marginBottom: "50vh", marginTop: "30vh"}} >Transform Waste. Shape the Future.</h1>
+    <h1 className="text-6xl font-bold mb-4 text-gray-800" style={{marginBottom: "50vh", marginTop: "30vh"}} >綠色循環 共創智慧</h1>
     <Separator className="my-4" style={{marginBottom: "50px"}} />
-    <h1 className="text-2xl mb-4" style={{marginBottom: "50px"}} >First visit? Here's how it works:</h1>
+    <h1 className="text-2xl mb-4" style={{marginBottom: "50px"}} >首次來到? 請先仔細閱讀:</h1>
 
     <div className="flex flex-col md:flex-row justify-start w-full max-w-4xl">
       <Card className="w-[350px]" style={{marginRight: "150px", marginBottom: "50px"}}>
         <CardHeader>
-          <CardTitle>Step 1: Go to the Waste Classify Page</CardTitle>
+          <CardTitle>步驟1: 前往「垃圾分類」頁面</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Navigate to the Waste Classify page.</li>
-            <li>You can usually find it in the main menu or navigation bar.</li>
+            <li>請至「垃圾分類」頁面。</li>
+            <li>您可以在網頁的右上角中找到它。</li>
           </ul>
         </CardContent>
       </Card>
@@ -71,12 +71,12 @@ export default function Home() {
         />
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>Step 2: Select the Waste Image</CardTitle>
+          <CardTitle>步驟2: 選擇垃圾圖片</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Look for the option to select or upload a waste image. This can typically be done by clicking on a button or an image placeholder.</li>
-            <li>Choose an image of the waste item you want to classify. Make sure the image is clear and shows the waste item prominently.</li>
+            <li>找到上傳垃圾圖片的位置，通過點擊圖片顯示區來完成。</li>
+            <li>選擇您要分類的垃圾物品的圖片。確保圖片清晰,並突出顯示該垃圾物品。</li>
           </ul>
         </CardContent>
       </Card>
@@ -87,12 +87,12 @@ export default function Home() {
     <div className="flex flex-col md:flex-row justify-start w-full max-w-4xl">
       <Card className="w-[350px]" style={{marginRight: "150px", marginBottom: "50px"}}>
         <CardHeader>
-          <CardTitle>Step 3: Press the Predict Button</CardTitle>
+          <CardTitle>步驟3: 按下「查詢」按鈕</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Once you have selected the waste image, locate the "Predict" button and click on it.</li>
-            <li>The app will process the image and analyze its content to determine the waste category.</li>
+            <li>選擇好圖片後,找到「查詢」按鈕並點擊它。</li>
+            <li>網站將處理這張圖片並分析其內容,以確定垃圾的類別。</li>
           </ul>
         </CardContent>
       </Card>
@@ -127,13 +127,13 @@ export default function Home() {
         />
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>Step 4: View the Result and Description</CardTitle>
+          <CardTitle>步驟4: 查看結果和回收指引</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="list-disc pl-5 space-y-2">
-            <li>After the analysis is complete, the app will display the result of the waste classification.</li>
-            <li>Look for the waste category or label assigned to the item, along with a brief description or additional information about the waste type.</li>
-            <li>Take note of any specific instructions or guidelines provided regarding proper disposal or handling of the waste.</li>
+            <li>分析完成後,網站會顯示垃圾分類的結果。</li>
+            <li>查看分配給該物品的垃圾類別或標籤,以及關於該垃圾類型的簡要說明和回收資訊。</li>
+            <li>注意任何關於如何正確處理或處置該垃圾的具體說明或指南。</li>
           </ul>
         </CardContent>
       </Card>
@@ -144,19 +144,19 @@ export default function Home() {
     <div className="flex flex-col md:flex-row justify-start w-full max-w-4xl">
       <Card className="w-[350px]" style={{marginRight: "150px", marginBottom: "50px"}}>
         <CardHeader>
-          <CardTitle>Step 5: Reset and Predict Next One</CardTitle>
-          <CardDescription> (Optional)</CardDescription>
+          <CardTitle>步驟5: 重置並預測下一個</CardTitle>
+          <CardDescription> (可選)</CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc pl-5 space-y-2">
-            <li>If you have more waste items to classify, you can reset the app and predict the next one.</li>
-            <li>Locate the "Reset" button and click on it to clear the current image and classification result.</li>
-            <li>Repeat steps 2 to 4 for each waste item you want to classify.</li>
+            <li>如果您還有更多垃圾需要分類,您可以重置並預測下一個。</li>
+            <li>找到「重置」按鈕並點擊它,以清除當前的圖像和分類結果。</li>
+            <li>針對每個需要分類的垃圾物品,重複步驟2到4。</li>
           </ul>
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button asChild className="cta">
-            <Link href="/image-recognition">Waste Classify</Link>
+            <Link href="/image-recognition">垃圾分類</Link>
           </Button>
         </CardFooter>
       </Card>
