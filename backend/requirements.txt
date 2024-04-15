@@ -1,6 +1,8 @@
-flask===3.0.2
+flask==3.0.2
+flask-cors
+pillow
 torch
 torchaudio
 torchvision
-ultralytics===8.1.29
-waitress===3.0.0
+ultralytics==8.1.29
+waitress
