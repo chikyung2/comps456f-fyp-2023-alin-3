@@ -16,6 +16,10 @@ with open("waste_type_info.json", "r", encoding="utf-8") as f:
     waste_type_info = json.load(f)
 
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello, World!"
+
 @app.route('/recognize', methods=['POST'])
 def recognize():
     image = request.files["image"]
