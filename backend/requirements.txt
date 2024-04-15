@@ -3,3 +3,4 @@ torch
 torchaudio
 torchvision
 ultralytics===8.1.29
+waitress===3.0.0
