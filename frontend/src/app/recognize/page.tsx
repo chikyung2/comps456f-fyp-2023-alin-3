@@ -52,7 +52,7 @@ export default function Page() {
     formData.append('image', file);
 
     try {
-      const response = await fetch('http://127.0.0.1:8080/recognize', {
+      const response = await fetch('fyp-backend-eight-azure.vercel.app/recognize', {
         method: 'POST',
         body: formData
       });
