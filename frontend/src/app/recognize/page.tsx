@@ -15,6 +15,7 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert"
+import { Label } from "@/components/ui/label"
 import { Image as ImageIcon, CircleCheck, CircleX } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
@@ -87,11 +88,11 @@ export default function Page() {
             <CardContent>
               <div className="flex flex-col gap-4">
                 {uploadedImage ? <Image src={uploadedImage} alt="Selected Image" width={0} height={0} className="w-full max-h-96 object-cover" /> : (
-                  <label htmlFor="upload" className="gap-2 w-full h-40 border-dashed border-2 border-muted-foreground flex flex-col items-center justify-center cursor-pointer">
+                  <Label htmlFor="upload" className="gap-2 w-full h-40 border-dashed border-2 border-muted-foreground flex flex-col items-center justify-center cursor-pointer">
                     <Input type="file" accept="image/*" onChange={handleFileChange} className="hidden" id="upload" />
                     <ImageIcon className="text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">點擊上傳</span>
-                  </label>)}
+                    <Label className="text-sm text-muted-foreground">點擊上傳</Label>
+                  </Label>)}
 
                 {result ? (
                   <>
