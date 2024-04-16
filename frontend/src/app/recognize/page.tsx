@@ -97,14 +97,14 @@ export default function Page() {
                 {result ? (
                   <>
                     <div className="text-md">
-                      Predicted {result.details.type} with {toPercentage(result.prediction.confidence)}% confidence
+                      查詢結果為 {result.details.type} ， {toPercentage(result.prediction.confidence)}% 確定結果。
                     </div>
                     {result.details.recyclable ? (
                       <Alert variant="info">
                         <CircleCheck className="primary h-4 w-4" />
-                        <AlertTitle>Recycle out of home</AlertTitle>
+                        //<AlertTitle>外出回收</AlertTitle>
                         <AlertDescription>
-                          {result.details.type} can be recycled at some out of home locations - find out more recycling tips below.
+                          {result.details.type} 是可以回收的，回收指引請詳細閱讀下方說明。
                         </AlertDescription>
                       </Alert>
                     ) : (
@@ -112,7 +112,7 @@ export default function Page() {
                         <CircleX className="primary h-4 w-4" />
                         <AlertTitle>Bin it</AlertTitle>
                         <AlertDescription>
-                          {result.details.type} can not be recycled. Throw it to the bin.
+                          {result.details.type} 是不能回收的，請當做一般廢物處理。
                         </AlertDescription>
                       </Alert>
                     )}
@@ -134,7 +134,7 @@ export default function Page() {
                   <AvatarImage src={`/img/${result.details.icon}`} />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-2xl">How to recycle {result?.details.type}
+                <CardTitle className="text-2xl">如何回收{result?.details.type}
                 </CardTitle>
                 {/* <CardDescription>Take a photo with camera or select from the gallery. Easily know the category of the waste.</CardDescription> */}
               </CardHeader>
