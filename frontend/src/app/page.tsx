@@ -149,11 +149,11 @@ export default function Home() {
           </CardContent>
           <CardFooter className="flex justify-between">
             <Button asChild className="cta">
-              <Link href="/image-recognition">垃圾分類</Link>
+              <Link href="/recognize">垃圾分類</Link>
             </Button>
           </CardFooter>
         </Card>
-        <img
+        <Image
           alt="ECOchamp Logo"
           className="mb-8"
           height="340"
