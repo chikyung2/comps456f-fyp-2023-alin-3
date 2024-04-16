@@ -16,7 +16,7 @@ import {
   AlertTitle,
 } from "@/components/ui/alert"
 import { Label } from "@/components/ui/label"
-import { Image as ImageIcon, CircleCheck, CircleX } from "lucide-react"
+import { Image as ImageIcon, CircleCheck, CircleX, Loader2 } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface ApiResponse {
@@ -52,7 +52,7 @@ export default function Page() {
     formData.append('image', file);
 
     try {
-      const response = await fetch('fyp-backend-eight-azure.vercel.app/recognize', {
+      const response = await fetch('http://127.0.0.1:8080/recognize', {
         method: 'POST',
         body: formData
       });
@@ -97,12 +97,12 @@ export default function Page() {
                 {result ? (
                   <>
                     <div className="text-md">
-                      分析結果為 {result.details.type} ， {toPercentage(result.prediction.confidence)}% 確應結果。
+                      {result.details.type} | 相似度: {toPercentage(result.prediction.confidence)}%
                     </div>
                     {result.details.recyclable ? (
                       <Alert variant="info">
                         <CircleCheck className="primary h-4 w-4" />
-                        //<AlertTitle>外出回收</AlertTitle>
+                        <AlertTitle>可以回收</AlertTitle>
                         <AlertDescription>
                           {result.details.type} 是可以回收的，回收指引請詳細閱讀下方說明。
                         </AlertDescription>
@@ -110,18 +110,18 @@ export default function Page() {
                     ) : (
                       <Alert variant="destructive">
                         <CircleX className="primary h-4 w-4" />
-                        <AlertTitle>Bin it</AlertTitle>
+                        <AlertTitle>不能回收</AlertTitle>
                         <AlertDescription>
-                          {result.details.type} 是不能回收的，請當做一般廢物處理。
+                          {result.details.type} 是不能回收的，請當做一般廢物處理，丟進垃圾桶。
                         </AlertDescription>
                       </Alert>
                     )}
 
-                    <Button className="flex-1" onClick={resetState}>分析其他物件</Button>
+                    <Button className="flex-1" onClick={resetState}>識別其他物件</Button>
                   </>
                 ) : (<div className="flex max-md:flex-col gap-2">
-                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>分析</Button>
-                  <Button className="flex-1" onClick={resetState}>重置</Button>
+                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>{loading ? (<><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait</>) : "識別"}</Button>
+                  <Button className="flex-1" onClick={resetState} disabled={!file || loading}>重置</Button>
                 </div>)}
               </div>
             </CardContent>
