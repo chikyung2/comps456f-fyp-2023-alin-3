@@ -97,7 +97,7 @@ export default function Page() {
                 {result ? (
                   <>
                     <div className="text-md">
-                      查詢結果為 {result.details.type} ， {toPercentage(result.prediction.confidence)}% 確定結果。
+                      分析結果為 {result.details.type} ， {toPercentage(result.prediction.confidence)}% 確應結果。
                     </div>
                     {result.details.recyclable ? (
                       <Alert variant="info">
@@ -117,10 +117,10 @@ export default function Page() {
                       </Alert>
                     )}
 
-                    <Button className="flex-1" onClick={resetState}>查詢其他物件</Button>
+                    <Button className="flex-1" onClick={resetState}>分析其他物件</Button>
                   </>
                 ) : (<div className="flex max-md:flex-col gap-2">
-                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>查詢</Button>
+                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>分析</Button>
                   <Button className="flex-1" onClick={resetState}>重置</Button>
                 </div>)}
               </div>
