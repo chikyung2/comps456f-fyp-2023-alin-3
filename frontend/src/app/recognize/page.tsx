@@ -120,7 +120,7 @@ export default function Page() {
                     <Button className="flex-1" onClick={resetState}>識別其他物件</Button>
                   </>
                 ) : (<div className="flex max-md:flex-col gap-2">
-                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>{loading ? (<><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait</>) : "識別"}</Button>
+                  <Button type='submit' className="flex-1" onClick={handleSubmit} disabled={!file || loading}>{loading ? (<><Loader2 className="mr-2 h-4 w-4 animate-spin" /> 請稍等</>) : "識別"}</Button>
                   <Button className="flex-1" onClick={resetState} disabled={!file || loading}>重置</Button>
                 </div>)}
               </div>
