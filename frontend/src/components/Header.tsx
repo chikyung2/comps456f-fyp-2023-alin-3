@@ -17,7 +17,7 @@ export const Header = () => {
                             <Image src='/img/ECOchampC.png' alt='EcoChamp' fill />
                         </div>
                         {/* <Package2 className="h-6 w-6" /> */}
-                        <span className="">EcoChamp</span>
+                        <span className="">EcoChamps</span>
                     </Link>
                 </nav>
                 
