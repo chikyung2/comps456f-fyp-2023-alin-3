@@ -54,7 +54,7 @@
         "recyclable": true
     },
     "9": {
-        "type": "不可回收",
+        "type": "一般垃圾",
         "icon": "nonrecyc.png",
         "info": "這些物品不適合放入回收箱,請另行處理。",
         "recyclable": false

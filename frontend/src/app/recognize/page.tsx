@@ -97,7 +97,7 @@ export default function Page() {
                 {result ? (
                   <>
                     <div className="text-md">
-                      {result.details.type} | 相似度: {toPercentage(result.prediction.confidence)}%
+                      {result.prediction.name} | 相似度: {toPercentage(result.prediction.confidence)}%
                     </div>
                     {result.details.recyclable ? (
                       <Alert variant="info">
@@ -112,7 +112,7 @@ export default function Page() {
                         <CircleX className="primary h-4 w-4" />
                         <AlertTitle>不能回收</AlertTitle>
                         <AlertDescription>
-                          {result.details.type} 是不能回收的，請當做一般廢物處理，丟進垃圾桶。
+                          {result.details.type} 是不能回收的。{result.details.info}
                         </AlertDescription>
                       </Alert>
                     )}
@@ -127,7 +127,7 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          {result && result.details && (
+          {result && result.details.recyclable && (
             <Card className="w-full max-w-lg">
               <CardHeader>
                 <Avatar>

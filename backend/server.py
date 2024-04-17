@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load waste mapping and type info
-with open("waste_dict.json", "r") as f:
+with open("waste_dict.json", "r", encoding="utf-8") as f:
     waste_dict = json.load(f)
 
 with open("waste_type_info.json", "r", encoding="utf-8") as f:
@@ -19,6 +19,7 @@ with open("waste_type_info.json", "r", encoding="utf-8") as f:
 @app.route('/', methods=['GET'])
 def index():
     return "Hello, World!"
+
 
 @app.route('/recognize', methods=['POST'])
 def recognize():
@@ -36,7 +37,7 @@ def classify_image(buffer):
     predicted_class_index = result.probs.top1
     waste_category_index = waste_dict[str(predicted_class_index)]["type"]
 
-    return {"prediction": {"name": result.names[predicted_class_index], "confidence": result.probs.top1conf.item()}, "details": waste_type_info[str(waste_category_index)]}
+    return {"prediction": {"name": waste_dict[str(predicted_class_index)]["name_zh"], "confidence": result.probs.top1conf.item()}, "details": waste_type_info[str(waste_category_index)]}
 
 
 if __name__ == '__main__':
