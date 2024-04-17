@@ -80,11 +80,11 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-start w-full max-w-4xl">
         <Card className="w-[350px]" style={{ marginRight: "150px", marginBottom: "50px" }}>
           <CardHeader>
-            <CardTitle>步驟3: 按下「查詢」按鈕</CardTitle>
+            <CardTitle>步驟3: 按下「識別」按鈕</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="list-disc pl-5 space-y-2">
-              <li>選擇好圖片後,找到「查詢」按鈕並點擊它。</li>
+              <li>選擇好圖片後,找到「識別」按鈕並點擊它。</li>
               <li>網站將處理這張圖片並分析其內容,以確定垃圾的類別。</li>
             </ul>
           </CardContent>
