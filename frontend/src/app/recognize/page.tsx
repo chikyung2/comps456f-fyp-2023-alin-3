@@ -52,7 +52,7 @@ export default function Page() {
     formData.append('image', file);
 
     try {
-      const response = await fetch(`${process.env.API_SERVER_URL}/recognize`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recognize`, {
         method: 'POST',
         body: formData
       });
