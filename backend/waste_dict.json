@@ -1,6 +1,6 @@
 {
-    "1": { "name": "aluminum can", "name_zh": "鋁罐", "type": 4 },
-    "0": { "name": "bag", "name_zh": "袋子", "type": 12 },
+    "0": { "name": "aluminum can", "name_zh": "鋁罐", "type": 4 },
+    "1": { "name": "bag", "name_zh": "袋子", "type": 12 },
     "2": { "name": "bamboo chopsticks", "name_zh": "竹筷子", "type": 9 },
     "3": { "name": "beverage carton", "name_zh": "飲料紙盒", "type": 17 },
     "4": { "name": "cardboard", "name_zh": "紙板", "type": 5 },
