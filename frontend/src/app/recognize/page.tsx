@@ -52,7 +52,7 @@ export default function Page() {
     formData.append('image', file);
 
     try {
-      const response = await fetch('http://127.0.0.1:8080/recognize', {
+      const response = await fetch(`${process.env.API_SERVER_URL}/recognize`, {
         method: 'POST',
         body: formData
       });
