@@ -97,7 +97,7 @@ export default function Page() {
                 {result ? (
                   <>
                     <div className="text-md">
-                      {result.prediction.name} | 相似度: {toPercentage(result.prediction.confidence)}%
+                      {result.prediction.name} | 置信度: {toPercentage(result.prediction.confidence)}%
                     </div>
                     {result.details.recyclable ? (
                       <Alert variant="info">
